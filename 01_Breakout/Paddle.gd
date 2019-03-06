@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 export var speed = 100
 export var damp_factor = 0.8
@@ -20,5 +20,5 @@ func _physics_process(delta):
 	else :
 		direction = 0
 		velocity *= damp_factor
-	$KinematicBody2D.move_and_collide(velocity)
+	move_and_collide(velocity)
 	pass

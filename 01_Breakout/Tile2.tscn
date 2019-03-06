@@ -1,34 +1,28 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Paddle.gd" type="Script" id=1]
-[ext_resource path="res://paddle_11.png" type="Texture" id=2]
+[ext_resource path="res://tileYellow_02.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15.0554, 59.6546 )
+extents = Vector2( 36.4344, 16.4475 )
 
-[node name="Paddle" type="KinematicBody2D" groups=[
-"Paddle",
-]]
+[node name="Tile" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 1 )
-speed = 300
-damp_factor = 0.8
+_sections_unfolded = [ "Collision", "collision" ]
 
 [node name="Visuals" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-rotation = 1.5708
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
